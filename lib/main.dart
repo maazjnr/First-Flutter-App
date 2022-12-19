@@ -26,12 +26,16 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter app'),
-        centerTitle: true,
-      ),
+      backgroundColor: Colors.red,
+      body: Center(child: Column(
+        children: const [
+          Text('Welcome', style: TextStyle(color: Colors.white,
+          fontSize: 55, fontWeight: FontWeight.bold),),
+          SizedBox(height: 20.0,),
+          Text('hello'),
 
-      body: const Center(child: Text('Welcome to flutter')),
+        ],
+      )),
     );
   }
 }
