@@ -35,15 +35,15 @@ class LoginPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
-            'Welcome',
+            'Welcome to',
             style: TextStyle(
-                color: Colors.white, fontSize: 55, fontWeight: FontWeight.bold),
+                color: Colors.white70, fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 20.0,
           ),
           const Text(
-            'Maaz jnr',
+            'SPACE EXPLORE',
             style: TextStyle(
                 color: Colors.white70,
                 fontSize: 35,
