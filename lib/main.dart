@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: const LoginPage() ,
+      home: const LoginPage(),
     );
   }
 }
@@ -27,12 +30,51 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
-      body: Center(child: Column(
-        children: const [
-          Text('Welcome', style: TextStyle(color: Colors.white,
-          fontSize: 55, fontWeight: FontWeight.bold),),
-          SizedBox(height: 20.0,),
-          Text('hello'),
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Welcome',
+            style: TextStyle(
+                color: Colors.white, fontSize: 55, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          const Text(
+            'Maaz jnr',
+            style: TextStyle(
+                color: Colors.white70,
+                fontSize: 35,
+                fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Image.asset('images/login.png'),
+          const SizedBox(
+            height: 20.0,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.red,
+              minimumSize: const Size(300, 40),
+            ),
+            child: const Text('Login'),
+          ),
+
+            ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.redAccent,
+              foregroundColor: Colors.white,
+              minimumSize: const Size(300, 40),
+            ),
+            child: const Text('Register'),
+          ),
 
         ],
       )),
