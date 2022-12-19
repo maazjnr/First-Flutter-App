@@ -37,7 +37,9 @@ class LoginPage extends StatelessWidget {
           const Text(
             'Welcome to',
             style: TextStyle(
-                color: Colors.white70, fontSize: 25, fontWeight: FontWeight.bold),
+                color: Colors.white70,
+                fontSize: 25,
+                fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 20.0,
@@ -65,8 +67,7 @@ class LoginPage extends StatelessWidget {
             ),
             child: const Text('Login'),
           ),
-
-            ElevatedButton(
+          ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent,
@@ -75,7 +76,6 @@ class LoginPage extends StatelessWidget {
             ),
             child: const Text('Register'),
           ),
-
         ],
       )),
     );
