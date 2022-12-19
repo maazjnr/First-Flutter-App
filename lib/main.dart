@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const LoginPage() ,
     );
   }
 }
@@ -27,10 +27,11 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome'),
+        title: const Text('Flutter app'),
         centerTitle: true,
       ),
-      body: const Center(child: Text('Writing My First Flutter Code')),
+
+      body: const Center(child: Text('Welcome to flutter')),
     );
   }
 }
