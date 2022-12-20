@@ -68,7 +68,7 @@ class LoginPage extends StatelessWidget {
                   },
                 ),
               );
-            },
+            }, 
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               foregroundColor: Colors.red,
