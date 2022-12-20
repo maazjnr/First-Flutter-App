@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutterapp/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,17 +39,17 @@ class LoginPage extends StatelessWidget {
             'Welcome to',
             style: TextStyle(
                 color: Colors.white70,
-                fontSize: 25,
+                fontSize: 15,
                 fontWeight: FontWeight.bold),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           const Text(
-            'SPACE EXPLORE',
+            'Space Explore',
             style: TextStyle(
                 color: Colors.white70,
-                fontSize: 35,
+                fontSize: 30,
                 fontWeight: FontWeight.w700),
           ),
           const SizedBox(
@@ -59,7 +60,15 @@ class LoginPage extends StatelessWidget {
             height: 20.0,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return const HomePage();
+                  },
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               foregroundColor: Colors.red,
@@ -68,7 +77,7 @@ class LoginPage extends StatelessWidget {
             child: const Text('Login'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () { },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent,
               foregroundColor: Colors.white,
