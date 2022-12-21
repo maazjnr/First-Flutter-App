@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.black12,
                         spreadRadius: 2,
                         blurRadius: 2,
-                        offset: Offset(2, 2))
+                        offset: Offset(3, 3))
                   ]),
               child: Column(children: [
                 Image.asset("images/image1.png"),
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                 )
               ]),
             ),
-                    Container(
+            Container(
               width: double.infinity,
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               decoration: BoxDecoration(
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
                 )
               ]),
             ),
-                    Container(
+            Container(
               width: double.infinity,
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               decoration: BoxDecoration(
