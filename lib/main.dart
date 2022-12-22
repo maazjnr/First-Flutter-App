@@ -61,14 +61,14 @@ class LoginPage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-               Navigator.of(context).push(
+              Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (BuildContext context) {
                     return const HomePage();
                   },
                 ),
               );
-            }, 
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               foregroundColor: Colors.red,
@@ -77,7 +77,7 @@ class LoginPage extends StatelessWidget {
             child: const Text('Login'),
           ),
           ElevatedButton(
-            onPressed: () { },
+            onPressed: () {},
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent,
               foregroundColor: Colors.white,
