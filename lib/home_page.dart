@@ -2,13 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/description_page.dart';
 import 'package:flutterapp/main.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Color backgroundColor = Colors.white;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: backgroundColor,
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                if (backgroundColor == Colors.white) {
+                  backgroundColor = Colors.red;
+                } else {
+                  backgroundColor = Colors.white;
+                }
+              });
+            },
+            icon: const Icon(Icons.color_lens),
+          ),
+        ],
+      ),
       drawer: SafeArea(
         child: Drawer(
           child: Column(
@@ -118,7 +140,10 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const DescriptionPage();
+                      return const DescriptionPage(
+                        title: "Diamond Hands",
+                        imagePath: "images/image1.png",
+                      );
                     },
                   ),
                 );
@@ -146,14 +171,15 @@ class HomePage extends StatelessWidget {
                 ]),
               ),
             ),
-
-
-                        GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const DescriptionPage();
+                      return const DescriptionPage(
+                        title: "How to get Rich",
+                        imagePath: "images/image1.png",
+                      );
                     },
                   ),
                 );
@@ -181,12 +207,15 @@ class HomePage extends StatelessWidget {
                 ]),
               ),
             ),
-                        GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const DescriptionPage();
+                      return const DescriptionPage(
+                        title: "Should you buy a house",
+                        imagePath: "images/image2.png",
+                      );
                     },
                   ),
                 );
@@ -214,13 +243,15 @@ class HomePage extends StatelessWidget {
                 ]),
               ),
             ),
-
-                        GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const DescriptionPage();
+                      return const DescriptionPage(
+                        title: "Stock Market",
+                        imagePath: "images/image3.png",
+                      );
                     },
                   ),
                 );
@@ -248,7 +279,6 @@ class HomePage extends StatelessWidget {
                 ]),
               ),
             ),
-            
           ],
         ),
       ),
